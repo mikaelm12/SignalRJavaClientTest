@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String message = editText.getText().toString();
+                editText.setText("");
                 try {
                     hubConnection.send("Send", message);
                 } catch (Exception e) {
